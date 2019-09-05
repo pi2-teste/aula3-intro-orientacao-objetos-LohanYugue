@@ -23,8 +23,9 @@ public class Main {
             throw new Error("EU esperava que "+a+" fosse igual a "+b);
         }
     }
+    
 
-/*
+
     public static void testar_atributos() {
         Carro carro1 =  new Carro();
         Carro carro2 =  new Carro();
@@ -37,8 +38,8 @@ public class Main {
         assertEqual(carro2.getCor(), "prata");
         System.out.println("Parabéns, o teste de atributos está correto!");  
     }
-*/
-/*
+
+
     public static void testar_descricao() {
         Carro carro1 =  new Carro();
         Carro carro2 =  new Carro();
@@ -51,7 +52,7 @@ public class Main {
         assertEqual(carro3.descreve(), "Um carro");
         System.out.println("Parabéns, o teste da descrição está correto!");
     }
-*/
+
 /*    
     public static void testar_gasolina1() {
         Carro carro1 = new Carro();
@@ -94,11 +95,24 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //testar_atributos();
-        //testar_descricao();
+        testar_atributos();
+        testar_descricao();
         //testar_gasolina1();
         //testar_gasolina2();
         //testar_max_gasolina();
+        
+        
+    //Instancio o objeto da classe Carro
+    Carro meuCarro = new Carro();
+    meuCarro.setModelo("Uno");
+    
+    //Instancio outro objeto da classe Carro
+   Carro carroRodizio = new Carro();
+   carroRodizio.setModelo("J-type");
+   carroRodizio.setCor("Vermelho");
+    
+   JOptionPane.showMessageDialog(null, carroRodizio.getModelo() + " - " + carroRodizio.getCor()); 
+   
     }
     
 }
